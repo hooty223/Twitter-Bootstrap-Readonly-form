@@ -64,24 +64,24 @@
 
   	});
 	
-	//Add click listener to edit buttton(s)
-	readOnlyForm.find('.editReadOnly').click(function(){
+  	//Add click listener to edit buttton(s)
+  	readOnlyForm.find('.editReadOnly').click(function(){
 
-		//Show save button(s)
-		$('.readOnlySave').show();
-		
-		//Hide myself
-		$(this).hide();
+  		//Show save button(s)
+  		$(this).parents('form').find('.readOnlySave').show();
+  		
+  		//Hide myself
+  		$(this).hide();
 
-    //Remove the read only bits
-		readOnlyForm.find('.readOnlyCont').remove();
+      //Remove the read only bits
+  		$(this).parents('form').find('.readOnlyCont').remove();
 
-		//Loop through each '.controls'
-		readOnlyForm.find('.controls').each(function(){
-			$(this).children().show();
-		});
+  		//Loop through each '.controls'
+  		$(this).parents('form').find('.controls').each(function(){
+  			$(this).children().show();
+  		});
 
-	});
+  	});
 
   };
 })( jQuery );

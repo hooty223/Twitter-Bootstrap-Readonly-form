@@ -128,41 +128,43 @@
                             </div>
                         </form>
                     </div>
-                    <!--
                     <div class="span6">
-                        <form class="bs-docs-example form-horizontal">
+                        <form class="form-horizontal readOnly">
                             <legend>
                                 Your account
-                                <button class="btn pull-right">
+                                <button class="btn pull-right editReadOnly" type="button">
                                     Edit
+                                </button>
+                                <button class="btn btn-primary pull-right readOnlySave" type="button">
+                                    Save
                                 </button>
                             </legend>
                             <div class="control-group">
-                                <label class="control-label" for="inputName2">
+                                <label class="control-label" for="inputName">
                                     Name
                                 </label>
                                 <div class="controls">
-                                    <input type="text" id="inputName2" placeholder="Name" value="John Smith">
+                                    <input type="text" id="inputName" placeholder="Name" value="Kathryn Janeway">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="inputEmail2">
+                                <label class="control-label" for="inputEmail">
                                     Email
                                 </label>
                                 <div class="controls">
-                                    <input type="text" id="inputEmail2" placeholder="Email">
+                                    <input type="text" id="inputEmail" placeholder="Email" value="coffeeBlack@ussVoyager.gov">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="inputPassword2">
+                                <label class="control-label" for="inputPassword">
                                     Password
                                 </label>
                                 <div class="controls">
-                                    <input type="text" id="inputPassword2" placeholder="Password">
+                                    <input type="password" id="inputPassword" placeholder="Password" value="iheartborg">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="inputSex2">
+                                <label class="control-label" for="inputSex">
                                     Sex
                                 </label>
                                 <div class="controls">
@@ -170,31 +172,45 @@
                                         <option value="m">
                                             Male
                                         </option>
-                                        <option value="f">
+                                        <option value="f" selected>
                                             Female
                                         </option>
                                     </select>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="inputEmails2">
-                                    Receive emails?
+                                <label class="control-label" for="inputEmails">
+                                    Do you like time travel?
                                 </label>
                                 <div class="controls">
-                                    <input type="checkbox" id="inputEmails2">
+                                    <label class="radio">
+                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                      Yes
+                                    </label>
+                                    <label class="radio">
+                                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+                                      No
+                                    </label>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="inputComments2">
+                                <label class="control-label" for="inputEmails">
+                                    Receive emails?
+                                </label>
+                                <div class="controls">
+                                    <input type="checkbox" id="inputEmails">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputComments">
                                     Comments
                                 </label>
                                 <div class="controls">
-                                    <textarea id="inputComments2" placeholder="Comments" rows="3"></textarea>
+                                    <textarea id="inputComments" placeholder="Comments" rows="3">What prime directive?</textarea>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    -->
                 </div>
             </div>
         </section>
