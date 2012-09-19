@@ -50,6 +50,7 @@ The following form elements can be used:
 
 ```html
   <input type="text"/>
+  <input type="email"/> <!-- Creates a mailto link -->
   <input type="checkbox"/>
   <input type="radio"/>
   <input type="password"/> <!-- This will display '******' -->

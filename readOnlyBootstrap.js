@@ -30,7 +30,8 @@
   		var myVal;
 
   		//Elements to search for
-  		var textInputs = 		   $('[type="text"]',me);
+  		var textInputs =       $('[type="text"]',me);
+      var emailInputs =       $('[type="email"]',me);
   		var passwordInputs = 	 $('[type="password"]',me);
   		var selects = 			   $('select',me);
   		var checkboxInputs = 	 $('[type="checkbox"]',me);
@@ -41,7 +42,10 @@
   		if(textInputs.length){
   			myVal = textInputs.val();
   		} else if(passwordInputs.length){
-  			myVal = "*******";
+        myVal = "*******";
+      } else if(emailInputs.length){
+        var em = emailInputs.val();
+        myVal = "<a href='mailto:"+em+"'>"+em+"</a>";
   		} else if(selects.length){
   			myVal = selects.find('option:selected').html();
   		} else if(checkboxInputs.length){
