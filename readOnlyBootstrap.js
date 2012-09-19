@@ -21,8 +21,9 @@
   		var me = $(this);
 
   		//Hide everything inside
-  		$(this).children().hide();
+  		me.children().hide();
   		
+      //Declare the value
   		var myVal;
 
   		//Elements to search for
@@ -33,7 +34,7 @@
   		var radioInputs = 		$('[type="radio"]',me);
   		var textareas = 		$('textarea',me);
 
-  		//If it's a text input
+  		//Get the value of the form element
   		if(textInputs.length){
   			myVal = textInputs.val();
   		} else if(passwordInputs.length){
@@ -42,9 +43,9 @@
   			myVal = selects.find('option:selected').html();
   		} else if(checkboxInputs.length){
   			if(checkboxInputs.is(':checked')){
-  				myVal = "<i class='icon-ok'>";
+  				myVal = "<i class='icon-ok'></i>";
   			} else {
-  				myVal = "<i class='icon-remove'>";
+  				myVal = "<i class='icon-remove'></i>";
   			}
   		} else if(radioInputs.length){
   			myVal = $('[type="radio"]:checked',me).parent().text();
@@ -52,8 +53,13 @@
   			myVal = textareas.val();
   		}
 
+      //Get rid of whitespace
   		myVal = $.trim(myVal);
-  		myVal = (myVal ? myVal : "---")
+
+      //If the value wasn't found
+  		myVal = (myVal ? myVal : "---");
+
+      //Add the text version
   		$(this).append('<span class="readOnlyCont muted">'+myVal+'</span>');
 
   	});
@@ -67,6 +73,7 @@
 		//Hide myself
 		$(this).hide();
 
+    //Remove the read only bits
 		readOnlyForm.find('.readOnlyCont').remove();
 
 		//Loop through each '.controls'
