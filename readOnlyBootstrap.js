@@ -8,6 +8,9 @@
   	
   	var readOnlyForm = this;
 
+    //Add class for styling
+    readOnlyForm.addClass('isReadOnly');
+
   	//Hide the saveButton(s)
   	$('.readOnlySave').hide();
 
@@ -27,12 +30,12 @@
   		var myVal;
 
   		//Elements to search for
-  		var textInputs = 		$('[type="text"]',me);
-  		var passwordInputs = 	$('[type="password"]',me);
-  		var selects = 			$('select',me);
-  		var checkboxInputs = 	$('[type="checkbox"]',me);
-  		var radioInputs = 		$('[type="radio"]',me);
-  		var textareas = 		$('textarea',me);
+  		var textInputs = 		   $('[type="text"]',me);
+  		var passwordInputs = 	 $('[type="password"]',me);
+  		var selects = 			   $('select',me);
+  		var checkboxInputs = 	 $('[type="checkbox"]',me);
+  		var radioInputs = 		 $('[type="radio"]',me);
+  		var textareas = 		   $('textarea',me);
 
   		//Get the value of the form element
   		if(textInputs.length){
@@ -80,6 +83,9 @@
   		$(this).parents('form').find('.controls').each(function(){
   			$(this).children().show();
   		});
+
+      //Remove class for styling
+      readOnlyForm.removeClass('isReadOnly');
 
   	});
 
